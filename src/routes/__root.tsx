@@ -2,6 +2,8 @@ import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/r
 
 import appCss from "../styles.css?url";
 
+const GA_ID = "G-XXXXXXXXXX"; // TODO: replace with your real GA4 Measurement ID
+
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -29,19 +31,45 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "SRN Consultancy — Future-Ready AI Solutions for Your Business" },
+      {
+        name: "description",
+        content:
+          "SRN Consultancy builds AI automation, voice calling, web, video & employee management solutions that grow your business. Chat on WhatsApp.",
+      },
+      { name: "author", content: "SRN Consultancy" },
+      { name: "theme-color", content: "#05060f" },
+      { property: "og:title", content: "SRN Consultancy — AI Solutions That Convert" },
+      {
+        property: "og:description",
+        content:
+          "Premium AI solutions for ambitious businesses. Automation, voice calling, web, video & people management.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { property: "og:locale", content: "en_IN" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "SRN Consultancy — AI Solutions That Convert" },
+      {
+        name: "twitter:description",
+        content: "Future-ready AI solutions for ambitious businesses.",
+      },
     ],
     links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+    ],
+    scripts: [
       {
-        rel: "stylesheet",
-        href: appCss,
+        src: `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`,
+        async: true,
+      },
+      {
+        children: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);} 
+window.gtag = gtag;
+gtag('js', new Date());
+gtag('config', '${GA_ID}', { send_page_view: true });`,
       },
     ],
   }),
@@ -52,7 +80,7 @@ export const Route = createRootRoute({
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <HeadContent />
       </head>
