@@ -39,7 +39,7 @@ export const Route = createRootRoute({
       },
       { name: "author", content: "SRN Consultancy" },
       { name: "theme-color", content: "#05060f" },
-      { property: "og:title", content: "SRN Consultancy — AI Solutions That Convert" },
+      { property: "og:title", content: "SRN Consultancy — Future-Ready AI Solutions for Your Business" },
       {
         property: "og:description",
         content:
@@ -48,11 +48,16 @@ export const Route = createRootRoute({
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "en_IN" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "SRN Consultancy — AI Solutions That Convert" },
+      { name: "twitter:title", content: "SRN Consultancy — Future-Ready AI Solutions for Your Business" },
       {
         name: "twitter:description",
         content: "Future-ready AI solutions for ambitious businesses.",
       },
+      { name: "description", content: "SRN AI Futures is a futuristic, single-page AI business website designed for lead generation." },
+      { property: "og:description", content: "SRN AI Futures is a futuristic, single-page AI business website designed for lead generation." },
+      { name: "twitter:description", content: "SRN AI Futures is a futuristic, single-page AI business website designed for lead generation." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/dd11b069-eff3-459b-add4-bf21fbbe36cd/id-preview-85d8e0c1--79791dc6-4cbc-46d6-8ba0-a8529aa5d4e0.lovable.app-1777036508492.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/dd11b069-eff3-459b-add4-bf21fbbe36cd/id-preview-85d8e0c1--79791dc6-4cbc-46d6-8ba0-a8529aa5d4e0.lovable.app-1777036508492.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
