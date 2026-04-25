@@ -93,13 +93,6 @@ export function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll cue */}
-      <div className="pointer-events-none absolute bottom-8 left-1/2 z-10 -translate-x-1/2 text-xs uppercase tracking-[0.3em] text-muted-foreground">
-        <div className="flex flex-col items-center gap-2">
-          <span>Scroll</span>
-          <span className="h-8 w-px animate-pulse bg-gradient-to-b from-foreground/60 to-transparent" />
-        </div>
-      </div>
     </section>
   );
 }
